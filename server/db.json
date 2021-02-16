@@ -6,10 +6,15 @@
       "id": 1
     },
     {
-      "title": "UserID Test",
-      "description": "see if userid gets attached",
-      "userId": null,
-      "id": 2
+      "title": "ChrisTest",
+      "description": "1234",
+      "userId": "118356515673601909531",
+      "id": 3
+    },
+    {
+      "title": "New Stream",
+      "description": "New stream to test refactor - did this work?",
+      "id": 4
     }
   ]
 }

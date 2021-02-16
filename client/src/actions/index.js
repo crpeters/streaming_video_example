@@ -8,6 +8,7 @@ import {
     CREATE_STREAM
 } from "./types" 
 import streams from "../api/streams";
+import history from "../history";
 
 export const signIn = (userid) =>{
     return {
@@ -29,6 +30,8 @@ export const createStream = formValues => async (dispatch, getState) =>{
         type: CREATE_STREAM,
         payload : resp.data
     });
+
+    history.push('/');
 }
 
 export const getStream = id => async dispatch =>{
@@ -48,11 +51,13 @@ export const getStreamList = () => async dispatch =>{
 }
 
 export const editStream = (id, formValues)=> async dispatch =>{
-    const resp = await streams.put(`/streams/${id}`, formValues)
+    const resp = await streams.patch(`/streams/${id}`, formValues)
     dispatch({
         type: EDIT_STREAM,
         payload: resp.data
-    })
+    });
+
+    history.push("/");
 }
 
 export const deleteStream = id => async dispatch =>{
