@@ -62,10 +62,3 @@ export default reduxForm({
     form: 'streamForm',
     validate
 })(StreamForm);
-
-
-//this is also valid
-// connect(reduxForm({
-//     form: 'streamCreate',
-//     validate
-// })(StreamCreate))(StreamCreate)
